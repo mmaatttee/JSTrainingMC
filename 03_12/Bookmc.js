@@ -11,7 +11,6 @@ class Book {
     this.title = title;
     this.pages = pages;
     this.binding = binding;
-    this.pocketNum = pocketNum;
     this.format = {
       bwidth: formatW,
       blength: formatL,
