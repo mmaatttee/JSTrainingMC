@@ -17,4 +17,4 @@ const encyclopedia = new Book(
 );
 
 console.log("The Encyclopedia object:", encyclopedia);
-console.log("Date Published:", everydayPack.datePublished);
+console.log("Date Published:", encyclopedia.datePublished);
