@@ -1,39 +1,38 @@
-class Backpack {
+class Book {
   constructor(
-    name,
-    volume,
-    color,
-    pocketNum,
-    strapLengthL,
-    strapLengthR,
-    lidOpen,
-    dateAcquired
+    title,
+    pages,
+    binding,
+    formatW,
+    formatL,
+    read,
+    datePublished
   ) {
-    this.name = name;
-    this.volume = volume;
-    this.color = color;
+    this.title = title;
+    this.pages = pages;
+    this.binding = binding;
     this.pocketNum = pocketNum;
-    this.strapLength = {
-      left: strapLengthL,
-      right: strapLengthR,
+    this.format = {
+      bwidth: formatW,
+      blength: formatL,
     };
-    this.lidOpen = lidOpen;
-    this.dateAcquired = dateAcquired;
+    this.read = read;
+    this.datePublished = datePublished;
   }
-  toggleLid(lidStatus) {
-    this.lidOpen = lidStatus;
+  readYN(readstatus) {
+    this.read = readstatus;
   }
-  newStrapLength(lengthLeft, lengthRight) {
-    this.strapLength.left = lengthLeft;
-    this.strapLength.right = lengthRight;
+  newFormat(formatW, formatL) {
+    this.format.bwidth = formatW;
+    this.format.blength = formatL;
   }
-  backpackAge() {
+  bookAge() {
     let now = new Date();
-    let acquired = new Date(this.dateAcquired);
-    let elapsed = now - acquired; // elapsed time in milliseconds
-    let daysSinceAcquired = Math.floor(elapsed / (1000 * 3600 * 24));
-    return daysSinceAcquired;
+    let datePublished = new Date(this.datePublished);
+    let elapsed = now - datePublished; // elapsed time in milliseconds
+    let daysSincePublished = Math.floor(elapsed / (1000 * 3600 * 24));
+    return daysSincePublished;
   }
 }
 
-export default Backpack;
+export default Book;
