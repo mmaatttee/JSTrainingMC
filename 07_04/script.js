@@ -9,3 +9,18 @@
  */
 
 
+let library = ["book", "speakerL", "speakerR", "totebag", true, 4];
+console.log(library);
+let last = library.pop();
+
+console.log(last);
+
+
+library.splice(0,0,library.pop());
+console.log(library);
+
+library.push(last);
+console.log(library.sort());
+
+let found = library.find(stuff => stuff == "4");
+console.log(found);
